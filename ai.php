@@ -7,29 +7,41 @@ include "includes/header.php";
     <h2>AI i utvecklingsarbetet</h2>
 
     <p>
-        Under arbetet med detta projekt har jag använt
-        AI som ett stöd i utvecklingsprocessen.
+        Under arbetet med detta projekt har jag använt ChatGPT
+        som ett stöd i utvecklingsprocessen.
     </p>
 
     <p>
-        AI har hjälpt mig att förstå PHP, objektorienterad
-        programmering och databasanslutningar samt att strukturera projektets filer.
+        Jag har framför allt använt AI för att få hjälp med PHP,
+        objektorienterad programmering, databasanslutningar och
+        SQL-frågor. Jag har även fått hjälp med att strukturera
+        projektets filer och felsöka kod.
     </p>
 
-    <p>
-        Jag har använt AI för att få förklaringar och som stöd för att förstå hur
-        olika delar av webbplatsen fungerar tillsammans.
-    </p>
+
 
     <h3>Mina slutsatser</h3>
 
     <p>
-        Min slutsats är att AI kan vara ett användbart hjälpmedel vid programmering. Det kan spara tid
-        och hjälpa till att lösa problem. Samtidigt är det viktigt att förstå och skriva
-        koden själv, eftersom AI-genererad kod inte alltid är korrekt.
+        Min slutsats är att AI kan vara ett mycket användbart
+        hjälpmedel vid programmering. Det kan spara tid,
+        förklara svårare moment och hjälpa till att hitta fel
+        i koden.
+    </p>
+
+    <p>
+        Det är dock ytterst viktigt att skriva all kod själv. 
+        AI kan nämligen ge felaktiga förslag, vilket innebär att 
+        man själv måste kontrollera och testa att lösningarna faktiskt fungerar.
+    </p>
+
+    <p>
+        Jag tycker därför att AI fungerar bäst som ett
+        komplement till det egna lärandet och inte som en
+        ersättning för att själv lära sig programmering.
     </p>
 </section>
 
 <?php
 include "includes/footer.php";
-?>
+?>v
