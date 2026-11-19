@@ -133,3 +133,74 @@ footer {
         padding: 18px;
     }
 }
+
+/* Formulär för att lägga till aktivitet */
+
+.bucketlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+}
+
+.bucketlist-form label {
+    font-weight: bold;
+    color: #263746;
+    margin-top: 8px;
+}
+
+.bucketlist-form input,
+.bucketlist-form textarea,
+.bucketlist-form select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    background-color: #f8fafb;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333;
+}
+
+.bucketlist-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.bucketlist-form input:focus,
+.bucketlist-form textarea:focus,
+.bucketlist-form select:focus {
+    outline: none;
+    border-color: #40596e;
+    box-shadow: 0 0 0 3px rgba(64, 89, 110, 0.15);
+    background-color: white;
+}
+
+.bucketlist-form button {
+    margin-top: 15px;
+    padding: 13px 20px;
+    background-color: #263746;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.bucketlist-form button:hover {
+    background-color: #40596e;
+}
+
+/* Anpassning för mobil */
+
+@media (max-width: 600px) {
+    .bucketlist-form {
+        max-width: 100%;
+    }
+
+    .bucketlist-form button {
+        width: 100%;
+    }
+}

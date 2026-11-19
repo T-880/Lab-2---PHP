@@ -86,7 +86,7 @@ include "includes/header.php";
         </p>
     <?php endif; ?>
 
-    <form method="POST" action="bucketlist.php">
+    <form method="POST" action="bucketlist.php" class="bucketlist-form">
 
         <label for="name">Namn på aktivitet:</label>
         <input type="text" id="name" name="name" required maxlength="100">
