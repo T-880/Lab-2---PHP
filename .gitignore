@@ -1,0 +1,14 @@
+# Lokala inställningar
+.env
+
+# Operativsystem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+
+# Tillfälliga filer
+*.log
+*.tmp
