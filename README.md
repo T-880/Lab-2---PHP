@@ -46,4 +46,4 @@ Databasen heter `bucketlist` och tabellen heter `items`.
 
 ## Publicerad webbplats
 
-LÄNK KOMMER LIGGA HÄR
+https://studenter.miun.se/~antr2501/writeable/lab2/
