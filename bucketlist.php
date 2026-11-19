@@ -39,6 +39,30 @@ if (isset($_GET["added"])) {
     $success = "Aktiviteten har lagts till i din bucketlist!";
 }
 
+// Hantera radering av aktivitet
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["delete_item"])) {
+
+    $id = filter_input(INPUT_POST, "id", FILTER_VALIDATE_INT);
+
+    if ($id !== false && $id !== null && $id > 0) {
+
+        if ($bucketlist->deleteItem($id)) {
+            header("Location: bucketlist.php?deleted=1");
+            exit();
+        } else {
+            $error = "Det gick inte att radera aktiviteten.";
+        }
+
+    } else {
+        $error = "Ogiltigt ID.";
+    }
+}
+
+// Visa meddelande efter radering
+if (isset($_GET["deleted"])) {
+    $success = "Aktiviteten har raderats från din bucketlist!";
+}
+
 $items = $bucketlist->getAllItems();
 
 include "includes/header.php";
@@ -59,12 +83,6 @@ include "includes/header.php";
     <?php if ($error !== ""): ?>
         <p class="error">
             <?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?>
-        </p>
-    <?php endif; ?>
-
-    <?php if ($success !== ""): ?>
-        <p class="success">
-            <?= htmlspecialchars($success, ENT_QUOTES, 'UTF-8') ?>
         </p>
     <?php endif; ?>
 
@@ -94,6 +112,12 @@ include "includes/header.php";
 <section>
     <h2>Mina drömmar och mål</h2>
 
+    <?php if ($success !== ""): ?>
+        <p class="success">
+            <?= htmlspecialchars($success, ENT_QUOTES, 'UTF-8') ?>
+        </p>
+    <?php endif; ?>
+
     <?php if (empty($items)): ?>
 
         <p>Din bucketlist är tom än så länge!</p>
@@ -116,6 +140,15 @@ include "includes/header.php";
                     <strong>Tillagd:</strong>
                     <?= htmlspecialchars($item['created_at'], ENT_QUOTES, 'UTF-8') ?>
                 </p>
+                <form method="POST" action="bucketlist.php">
+
+                    <input type="hidden" name="id" value="<?= (int) $item['id'] ?>">
+
+                    <button type="submit" name="delete_item">
+                        Radera aktivitet
+                    </button>
+
+                </form>
             </article>
 
         <?php endforeach; ?>
